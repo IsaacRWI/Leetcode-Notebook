@@ -21,7 +21,7 @@ class Solution(object):
         :type t: str
         :rtype: bool
         """
-        return sorted(s) == sorted(t)
+        return sorted(s)== sorted(t)
 
 # counter solution
 from collections import Counter

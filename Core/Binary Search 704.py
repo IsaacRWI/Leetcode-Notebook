@@ -1,4 +1,4 @@
-def search(self, nums, target):
+def search( nums, target):
     l = 0
     r = len(nums) - 1
     while l <= r:
@@ -9,6 +9,7 @@ def search(self, nums, target):
               l = m + 1
         else:
              return m
-        return -1
+    return -1
 
 print(search([-1,0,3,5,9,12], 9))
+print(search([1,2,3],6))

@@ -1,17 +1,23 @@
 def searchMatrix(matrix, target):
-    for i in range(len(matrix)):
-        print(matrix[i][0], matrix[i][-1])
+    for i in range(len(matrix)):  # for item index in matrix
+        # print(matrix[i][0], matrix[i][-1])  # prints first number in the item and last number in the item
+
+        # this statement is not needed
+        """
         if target > matrix[i][0] and i != 0 and i == len(matrix):
-            target_layer = matrix[i - 1]
+        # if target is larger than first number in item, and it's not the first item, and it's the last item in the matrix
+            target_layer = matrix[i - 1]  # sets the target_layer to the item before this one
             # print("larger")
             break
-        elif target <= matrix[i][-1]:
-            target_layer = matrix[i]
+        """
+
+        if target <= matrix[i][-1]:  # if target is smaller or equal to last number in the item
+            target_layer = matrix[i]  # sets target_layer to current item
             # print("smaller")
             break
     else:
         # print("false")
-        return False
+        return False  # if target is not smaller than any last numbers in the items, reutrn false
     # print(target_layer)
     for i in target_layer:
         if i == target:

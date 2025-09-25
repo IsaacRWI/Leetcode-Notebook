@@ -1,4 +1,9 @@
-def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+class ListNode:
+     def __init__(self, val=0, next=None):
+         self.val = val
+         self.next = next
+
+def reverseList(head):
     curr = head  # current item = head ie first item in the linked list
     prev = None  # previous item is None
     while curr:  # whilst current is not None ie in bounds

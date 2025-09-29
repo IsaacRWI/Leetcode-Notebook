@@ -9,4 +9,4 @@ def isSameTree(self, p, q) -> bool:
         return True
     if not p or not q or p.val != q.val:  # if one of the nodes is null or if the values arent equal
         return False
-    return (self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right))  # recursively call function for leaves of the tree
+    return self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)  # recursively call function for leaves of the tree
